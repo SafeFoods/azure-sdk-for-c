@@ -94,7 +94,8 @@ static az_result _az_http_policy_logging_append_http_request_msg(
   az_span new_line_tab_string = AZ_SPAN_FROM_STR("\n\t");
   az_span colon_separator_string = AZ_SPAN_FROM_STR(" : ");
 
-  for (int32_t index = 0; index < headers_count; ++index)
+  int32_t index;
+  for (index = 0; index < headers_count; ++index)
   {
     az_span header_name = { 0 };
     az_span header_value = { 0 };

@@ -292,7 +292,8 @@ AZ_NODISCARD static az_result _az_json_reader_process_string(az_json_reader* ref
         string_length++;
 
         // Expecting 4 hex digits to follow the escaped 'u'
-        for (int32_t i = 0; i < 4; i++)
+        int32_t i;
+        for (i = 0; i < 4; i++)
         {
           if (current_index >= remaining_size)
           {
